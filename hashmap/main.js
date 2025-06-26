@@ -1,4 +1,5 @@
 import { HashMap } from "./hashmap.js";
+import { HashSet } from "./hashset.js";
 
 const test = new HashMap(0.75);
 test.set("apple", "red");
@@ -28,3 +29,15 @@ console.log(test.values());
 console.log(test.entries());
 test.clear();
 console.log(test.entries());
+
+const set = new HashSet(0.75);
+set.add('apple');
+set.add('banana');
+set.add('apple');
+console.log(set.has('banana'));
+console.log(set.length());
+console.log(set.keys());
+set.remove('apple');
+console.log(set.length());
+set.clear();
+console.log(set.length());
